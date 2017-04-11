@@ -2,12 +2,26 @@
 #import "Preferences/PSSpecifier.h"
 #import "Preferences/PSEditableTableCell.h"
 
-@interface DisabledTextPrefsRootListController : PSListController
+@interface DisabledTextPrefsRootListController : PSListController {
+    UIWindow *settingsView;
+}
 @end
 
 #define prefPath [NSString stringWithFormat:@"%@/Library/Preferences/%@", NSHomeDirectory(),@"se.nosskirneh.disabledtext.plist"]
 
 @implementation DisabledTextPrefsRootListController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    settingsView = [[UIApplication sharedApplication] keyWindow];
+    settingsView.tintColor = [UIColor redColor];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    settingsView = [[UIApplication sharedApplication] keyWindow];
+    settingsView.tintColor = nil;
+}
 
 - (NSArray *)specifiers {
 	if (!_specifiers) {
@@ -99,6 +113,8 @@
         [_label setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:48]];
         
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"DisabledText"];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0, 11)];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(8, 4)];
         
         [_label setAttributedText:attributedString];
         [_label setTextAlignment:NSTextAlignmentCenter];
