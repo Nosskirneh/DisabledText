@@ -1,0 +1,9 @@
+Package: se.nosskirneh.disabledtext
+Name: DisabledText
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Change the texts at the disabled lockscreen
+Maintainer: Andreas Henriksson
+Author: Andreas Henriksson
+Section: Tweaks
