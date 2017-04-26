@@ -1,6 +1,4 @@
-#import <Preferences/PSListController.h>
-#import "Preferences/PSSpecifier.h"
-#import "Preferences/PSEditableTableCell.h"
+#import <Preferences/Preferences.h>
 
 @interface DisabledTextPrefsRootListController : PSListController {
     UIWindow *settingsView;
@@ -96,6 +94,26 @@
 
 @end
 
+
+// Colorful UISwitches
+@interface PSSwitchTableCell : PSControlTableCell
+- (id)initWithStyle:(int)style reuseIdentifier:(id)identifier specifier:(id)specifier;
+@end
+
+@interface SRSwitchTableCell : PSSwitchTableCell
+@end
+
+@implementation SRSwitchTableCell
+
+-(id)initWithStyle:(int)style reuseIdentifier:(id)identifier specifier:(id)specifier {
+    self = [super initWithStyle:style reuseIdentifier:identifier specifier:specifier];
+    if (self) {
+        [((UISwitch *)[self control]) setOnTintColor:[UIColor redColor]];
+    }
+    return self;
+}
+
+@end
 
 
 @interface DisabledTextSettingsHeaderCell : PSTableCell {

@@ -25,6 +25,8 @@
         <dict>
             <key>cell</key>
             <string>PSSwitchCell</string>
+            <key>cellClass</key>
+            <string>SRSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>
@@ -55,6 +57,8 @@
         <dict>
             <key>cell</key>
             <string>PSSwitchCell</string>
+            <key>cellClass</key>
+            <string>SRSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>
@@ -85,6 +89,8 @@
         <dict>
             <key>cell</key>
             <string>PSSwitchCell</string>
+            <key>cellClass</key>
+            <string>SRSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>
