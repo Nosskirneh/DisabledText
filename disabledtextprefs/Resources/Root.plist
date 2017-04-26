@@ -26,7 +26,7 @@
             <key>cell</key>
             <string>PSSwitchCell</string>
             <key>cellClass</key>
-            <string>SRSwitchTableCell</string>
+            <string>DisabledTextSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>
@@ -58,7 +58,7 @@
             <key>cell</key>
             <string>PSSwitchCell</string>
             <key>cellClass</key>
-            <string>SRSwitchTableCell</string>
+            <string>DisabledTextSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>
@@ -90,7 +90,7 @@
             <key>cell</key>
             <string>PSSwitchCell</string>
             <key>cellClass</key>
-            <string>SRSwitchTableCell</string>
+            <string>DisabledTextSwitchTableCell</string>
             <key>default</key>
             <false/>
             <key>defaults</key>

@@ -100,10 +100,10 @@
 - (id)initWithStyle:(int)style reuseIdentifier:(id)identifier specifier:(id)specifier;
 @end
 
-@interface SRSwitchTableCell : PSSwitchTableCell
+@interface DisabledTextSwitchTableCell : PSSwitchTableCell
 @end
 
-@implementation SRSwitchTableCell
+@implementation DisabledTextSwitchTableCell
 
 -(id)initWithStyle:(int)style reuseIdentifier:(id)identifier specifier:(id)specifier {
     self = [super initWithStyle:style reuseIdentifier:identifier specifier:specifier];
